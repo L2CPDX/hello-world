@@ -1,5 +1,4 @@
-# Coding Notes
-
+## Coding Notes
 **This repository is a dumping ground for various coding notes I've taken on different beginner / learner tutorials.**  
   
 **Notes are from the following:**  

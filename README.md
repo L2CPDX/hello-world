@@ -9,3 +9,4 @@
   
 **This is not the extent of my notes. Sometimes I go handwritten and even do color syntax at times. I have many colorful pens.**   
 
+- **UPDATE Oct 28th** - An illness that may have been Covid tyook me out of commission for nearly a month. Back in the saddle now. 

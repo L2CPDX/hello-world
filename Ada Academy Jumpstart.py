@@ -537,4 +537,202 @@ else:
     # the else body is indented one more than the if, elif, and else statements
 
 
+# Conditionals Syntax
+
+# The following code block examples show how if, elif, and else statements work 
+
+
+# Practice #1
+temp = 90
+
+if temp < 50:
+    print("It's a bit chilly outside")
+    
+It's a bit chilly outside
+
+
+# Practice #1.1
+temp = 80
+
+if temp < 50:
+    print("It's a bit chilly outside")
+    
+# (Nothing is printed, because no condition is set for temp > 50)
+
+
+# Practice #2
+temp = 100
+
+if temp < 50:
+    print("It's a bit chilly outside")
+else:
+    print("It's pleasant outside")
+    
+It's pleasant outside
+
+
+# Practice #2.2
+temp = 80
+
+if temp < 50:
+    print("It's a bit chilly outside")
+elif temp > 68 and < 90:
+    print("It's quite pleasant outside")                        # well, that didn't work
+else:
+    print("It's in no way pleasant outside, it's over 90")
+ 
+File "<ipython-input-13-1a9cb345571c>", line 6                  # This got mad at the < expression, but I'm not sure why
+    elif temp > 68 and < 90:
+                       ^
+SyntaxError: invalid syntax
+
+
+# Practice #2.5
+temp = 100
+
+if temp < 50:
+    print("It's a bit chilly outside")
+elif temp > 78 :
+    print("It's quite pleasant outside") 
+elif temp < 90:
+    print("It's in no way pleasant outside, it's over 90")       # Nope, this will always return the elif on line 596
+    
+    
+# Practice #3
+temp = 0
+
+if temp == 100:
+    print("It's ONE HUNDDRED DEGREES outside!")
+elif temp < 100:
+    print("It's warm outside")
+elif temp < 50:
+    print("It's a bit chilly outside")  
+elif temp == 0:
+    print("It's ZERO DEGREES outside!")    
+    
+It's warm outside                                                # This prints the wrong output due to a problem with the order of the statements
+
+# Try that again
+temp = 0
+
+if temp == 0:
+    print("It's ZERO DEGREES outside!") 
+elif temp == 100:
+    print("It's ONE HUNDDRED DEGREES outside!")                  # Hey, spiffy! Put things in the correct order and they work as expected!
+elif temp < 50:
+    print("It's a bit chilly outside") 
+elif temp < 100:
+    print("It's warm outside")
+
+It's ZERO DEGREES outside!                                       # I AM GOD OF THE CODE EXERCISES. BOW BEFORE ME, MERE MORTALS
+
+
+
+
+## Debugging Logic Errors
+
+# The error I encountered in the temperatures exercise above is considered a *Logic Error* -- A logic error is a bug that cause your program to behave incorrectly. These errors may result in unintended or undesired output. 
+
+### Logic Errors & Syntax Errors
+
+# I have already encountered one category of errors which prevent programs from running: syntax errors. Leaving the `:` off of the `if` statement in Practice #3 causes the program to throw an error and fail to execute. Logic errors are different in that the program runs, but performs contrary to expectations. For example, in Practice #3 the program runs but prints "It's warm outside" instead of "It's ZERO DEGREES outside!"
+
+
+## Exercise
+# In black jack, a "bust" occurs if the cards total over 21. The code cell below should print
+
+# - Bust! if score is greater than 21.
+# - Black Jack! if score equals 21.
+# - Great Hand! if score is greater than or equal to 17, but less than 21.
+# - Hit Me! if score is less than 17  (Hit Me! means give me another card)
+
+# Currently the score is 21 but the code block mistakenly outputs Bust!. Find and fix the error and then review the solution code below:
+
+score = 21
+
+if score < 17:
+    print("Hit Me!")
+elif score < 21:
+    print("Great Hand")
+elif score >= 21:               # On Line 657, >= needs to be chanmged to >
+    print("Bust!")
+else:
+    print("Black Jack!")
+
+
+# and now, to make my brain leak out my ears
+
+score = 21
+
+if score < 17:
+    print("Hit Me!")
+elif score < 21:
+    print("Great Hand!")
+elif score > 21:
+    print("Bust!")
+else:
+    print("Black Jack!")
+    
+# Okay so apparently this is wrong and difficult and it's better to build this with all < signs (as seen below) and just... Hard Disagree. Whatever, if you want me to write it that way I will, but I'm doing so under protest. This example [lines 663-672] is WAY easier to understand than the one below.
+
+
+score = 21
+
+if score == 21:
+    print("Black Jack!")   
+elif score < 17:
+    print("Hit Me!")
+elif score < 21:
+    print("Great Hand!")
+else:
+    print("Bust!")
+
+# Apparently this is better. I hate it. I hate everything. Meh.
+
+
+
+## Exercise: Conditionals without relational operators.
+# As mentioned above, all non boolean data-types evaluate to "Truthy" or "Falsey" and as such can be used in a conditional control structure as shown below.
+
+x = 1
+#x = 0
+#x = None
+#x = ""
+#x = "hi"
+
+if x:
+    print(f'x = {x}, and therefore it\'s truthy')
+else:
+    print(f"x = {x}, and therefore it's falsey")
+
+x = 1, and therefore it's truthy
+
+
+#x = 1
+x = 0
+#x = None
+#x = ""
+#x = "hi"
+
+if x:
+    print(f'x = {x}, and therefore it\'s truthy')
+else:
+    print(f"x = {x}, and therefore it's falsey")
+
+x = 0, and therefore it's falsey
+
+
+#x = 1
+#x = 0
+x = None
+#x = ""
+#x = "hi"
+
+if x:
+    print(f'x = {x}, and therefore it\'s truthy')
+else:
+    print(f"x = {x}, and therefore it's falsey")
+
+x = None, and therefore it's falsey
+
 

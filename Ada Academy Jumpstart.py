@@ -736,3 +736,188 @@ else:
 x = None, and therefore it's falsey
 
 
+#x = 1
+#x = 0
+#x = None
+x = ""
+#x = "hi"
+
+if x:
+    print(f'x = {x}, and therefore it\'s truthy')
+else:
+    print(f"x = {x}, and therefore it's falsey")
+    
+
+#x = 1
+#x = 0
+#x = None
+x = ""
+#x = "hi"
+
+if x:
+    print(f'x = {x}, and therefore it\'s truthy')
+else:
+    print(f"x = {x}, and therefore it's falsey")
+    
+x = , and therefore it's falsey
+
+
+#x = 1
+#x = 0
+#x = None
+#x = ""
+x = "hi"
+
+if x:
+    print(f'x = {x}, and therefore it\'s truthy')
+else:
+    print(f"x = {x}, and therefore it's falsey")
+    
+x = hi, and therefore it's truthy
+
+
+## Note that in the above examples, The if clause is in single quotes and requiresd a \ backslash to escape the apostrophe. 
+## The else clause does not require an \ escape because it is in double quotes.
+
+
+# Solve the following: (Hint: Use % modulo)
+
+x = ...:
+
+if ...:
+    print("x is divisible by 5")
+else:
+    print("x is not divisible by 5")
+    
+
+# Answer:
+
+x = 50
+
+if x % 5 == 0:
+    print("x is divisible by 5")
+else:
+    print("x is not divisible by 5")
+    
+
+## Logical operators 
+
+# Operator          examples            result
+    and     (2 == 3) and (-1 < 5)       False
+    or      (2 == 3) and (-1 < 5)       True
+    not     not (2 ==3)                 True
+    
+
+# Going back to am old problem with this new knowledge
+
+# Let's try this problem from earlier again with this new knowledge:
+
+temp = 100
+
+if temp < 50:
+    print("It's a bit chilly outside")
+elif (temp > 68) and (temp < 90):
+    print("It's quite pleasant outside") 
+else:
+    print("It's in no way pleasant outside, it's over 90")          # OHHH YEAH! SUCK ON A POPSICLE, CODING! IT WORKS!
+
+It's in no way pleasant outside, it's over 90
+
+
+# The below example illustrates how the and statement works 
+
+coffee = True
+good_sleep = True
+
+#coffee = False
+#good_sleep = True
+
+#coffee = True
+#good_sleep = False
+
+#coffee = False
+#good_sleep = False
+
+if coffee and good_sleep:
+    print("It's going to be a great day!")
+else:
+    print("Eh. Today's going to be a wash.")
+
+It's going to be a great day!
+
+
+#coffee = True
+#good_sleep = True
+
+coffee = False
+good_sleep = True
+
+#coffee = True
+#good_sleep = False
+
+#coffee = False
+#good_sleep = False
+
+if coffee and good_sleep:
+    print("It's going to be a great day!")
+else:
+    print("Eh. Today's going to be a wash.")
+    
+Eh. Today's going to be a wash.
+
+
+#coffee = True
+#good_sleep = True
+
+#coffee = False
+#good_sleep = True
+
+coffee = True
+good_sleep = False
+
+#coffee = False
+#good_sleep = False
+
+if coffee and good_sleep:
+    print("It's going to be a great day!")
+else:
+    print("Eh. Today's going to be a wash.")
+
+Eh. Today's going to be a wash.
+
+
+#coffee = True
+#good_sleep = True
+
+#coffee = False
+#good_sleep = True
+
+#coffee = True
+#good_sleep = False
+
+coffee = False
+good_sleep = False
+
+if coffee and good_sleep:
+    print("It's going to be a great day!")
+else:
+    print("Eh. Today's going to be a wash.")
+    
+Eh. Today's going to be a wash.
+
+
+# Practice:
+# Use the diagram located in 03_branching.ipynb to recreate the flowchart in conditional code
+
+x = ...
+y = ...
+
+if x == y:
+    print('equal')
+elif x < y:
+    print('less')
+else:
+    print('greater') 
+    
+
+
